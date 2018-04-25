@@ -10,7 +10,7 @@ RUN pip install -r /requirements.txt \
     && groupadd -r django \
     && useradd -r -g django django
 
-COPY .project /app
+COPY project /app
 RUN chown -R django /app
 RUN mkdir -p /var/ypgforum /var/ypgforum_static
 ADD gunicorn.sh /gunicorn.sh
