@@ -35,7 +35,8 @@ services:
     volumes:
       - mediafiles:/var/ypgforum
       - staticfiles:/var/ypgforum_static
-    command: /gunicorn.sh
+    # command: /gunicorn.sh
+    command: python manage.py runserver 0.0.0.0:5000
     # env_file: ./new.env
 
 
