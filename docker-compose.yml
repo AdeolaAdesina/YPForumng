@@ -37,7 +37,7 @@ services:
       - staticfiles:/var/ypgforum_static
     # command: /gunicorn.sh
     command: python manage.py runserver 0.0.0.0:5000
-    # env_file: ./new.env
+    env_file: ./.env
 
 
   django-server:
