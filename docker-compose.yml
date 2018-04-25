@@ -8,14 +8,14 @@ volumes:
   mediafiles: {}
 
 services:
-  # postgres:
-  #   build: ./compose/postgres
-  #   volumes:
-  #     - postgres_data:/var/lib/postgresql/data
-  #     - postgres_backup:/backups
-  #   env_file: ./new.env
-  #   ports:
-  #     - "5433:5432"
+  postgres:
+    build: ./compose/postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - postgres_backup:/backups
+    env_file: ./.env
+    ports:
+      - "5433:5432"
     
 
   # postgres_slave:
@@ -29,8 +29,8 @@ services:
       context: .
       dockerfile: ./Dockerfile
     # user: django
-    # depends_on:
-      # - postgres
+    depends_on:
+      - postgres
       # - redis
     volumes:
       - mediafiles:/var/ypgforum
