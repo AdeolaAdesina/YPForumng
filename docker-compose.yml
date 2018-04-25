@@ -32,7 +32,7 @@ services:
     depends_on:
       # - postgres
       # - redis
-    volumes:0
+    volumes:
       - mediafiles:/var/ypgforum
       - staticfiles:/var/ypgforum_static
     command: /gunicorn.sh
