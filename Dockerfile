@@ -23,7 +23,7 @@ RUN sed -i 's/\r//' /entrypoint.sh \
     && chown django /entrypoint.sh \
     && chmod +x /gunicorn.sh \
     && chown django /gunicorn.sh
-
+EXPOSE 5000
 WORKDIR /app
 VOLUME ['/var/ypgforum']
 
