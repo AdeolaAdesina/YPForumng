@@ -49,8 +49,8 @@ services:
     depends_on:
       - django
     volumes:
-      - staticfiles:/var/pyconng_static
-      - mediafiles:/var/pyconng
+      - staticfiles:/var/ypgforum_static
+      - mediafiles:/var/ypgforum
     environment:
       - VIRTUAL_HOST=ypgforum.com
       - VIRTUAL_NETWORK=nginx-proxy
