@@ -1,4 +1,5 @@
 # Young Pharmacists Forum Code Source for collaborators
+YPG Forum is a discussion platform for every young pharmacist all over the world.
 
 This is the code base for YPF. Any issues? Send me a mail at adeolaadesina@gmail.com
 
